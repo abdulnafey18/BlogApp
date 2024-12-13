@@ -9,7 +9,8 @@ Rails.application.configure do
   # Allow EC2 public hostname
   config.hosts << "ec2-54-89-186-149.compute-1.amazonaws.com"
 
-  config.web_console.permissions = '0.0.0.0/0'  # Allow all IPs
+  # Allow all IPs
+  config.web_console.permissions = '0.0.0.0/0' 
 
   # Code is not reloaded between requests.
   config.enable_reloading = false
