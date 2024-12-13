@@ -6,6 +6,9 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.enable_reloading = false
 
+    # Clear all host authorization
+    config.hosts.clear
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -91,9 +94,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  # Enable DNS rebinding protection and other `Host` header attacks.
-  config.hosts << "ec2-54-89-186-149.compute-1.amazonaws.com"
   
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
