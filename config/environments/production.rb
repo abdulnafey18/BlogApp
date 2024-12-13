@@ -2,8 +2,11 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  # Allow EC2 public IP
+  config.hosts << "54.89.186.149"
 
-  # Allow EC2 instance hostname
+  # Allow EC2 public hostname
   config.hosts << "ec2-54-89-186-149.compute-1.amazonaws.com"
 
   # Code is not reloaded between requests.
